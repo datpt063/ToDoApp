@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        Added the entity Tasks.
+    -->
+    <changeSet id="20200606150000-01" author="datpt">
+        <renameColumn catalogName="todoapp"
+                      columnDataType="boolean"
+                      newColumnName="importance"
+                      oldColumnName="impotance"
+                      remarks="Rename column"
+                      schemaName="public"
+                      tableName="tasks"/>
+    </changeSet>
+
+</databaseChangeLog>

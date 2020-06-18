@@ -1,0 +1,9 @@
+entity Tasks{
+	id Long required,
+    userId Long required,
+    crearedDate Instant,
+    dueDate Instant,
+    impotance Boolean,
+    status Integer,
+    noiDung String,
+}

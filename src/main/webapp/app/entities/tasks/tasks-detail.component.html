@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tasks">
+            <h2><span>Tasks</span> {{ tasks.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>User Id</span></dt>
+                <dd>
+                    <span>{{ tasks.userId }}</span>
+                </dd>
+                <dt><span>Creared Date</span></dt>
+                <dd>
+                    <span>{{ tasks.crearedDate }}</span>
+                </dd>
+                <dt><span>Due Date</span></dt>
+                <dd>
+                    <span>{{ tasks.dueDate }}</span>
+                </dd>
+                <dt><span>Impotance</span></dt>
+                <dd>
+                    <span>{{ tasks.impotance }}</span>
+                </dd>
+                <dt><span>Status</span></dt>
+                <dd>
+                    <span>{{ tasks.status }}</span>
+                </dd>
+                <dt><span>Noi Dung</span></dt>
+                <dd>
+                    <span>{{ tasks.noiDung }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/tasks', tasks.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
